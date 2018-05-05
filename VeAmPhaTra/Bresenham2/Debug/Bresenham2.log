@@ -1,0 +1,11 @@
+﻿  Bresenham2.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(19): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(20): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(36): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(37): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(53): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(54): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(70): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\bresenham2\bresenham2.cpp(71): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Bresenham2.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Bresenham2.exe
+  Bresenham2.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Bresenham2.pdb (Full PDB)

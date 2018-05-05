@@ -1,0 +1,5 @@
+﻿  Display list.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\display list\display list.cpp(90): warning C4244: '=': conversion from 'GLuint' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\display list\display list.cpp(123): warning C4244: 'argument': conversion from 'GLfloat' to 'GLuint', possible loss of data
+  Display list.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Display list.exe
+  Display list.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Display list.pdb (Full PDB)

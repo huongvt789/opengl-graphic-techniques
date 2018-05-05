@@ -1,0 +1,4 @@
+﻿  Cau2Bresenham.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\cau2bresenham\cau2bresenham.cpp(16): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Cau2Bresenham.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Cau2Bresenham.exe
+  Cau2Bresenham.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Cau2Bresenham.pdb (Full PDB)
