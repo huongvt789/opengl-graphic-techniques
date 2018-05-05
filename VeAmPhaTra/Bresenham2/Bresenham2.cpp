@@ -7,8 +7,8 @@
 
 void bre(int x1, int y1, int x2, int y2,int n)
 {
-	int dx, dy, x, y, d; x = x1; y = y1;
-	
+	int dx, dy, x, y, d; 
+	x = x1; y = y1;
 	dx = x2 - x1; dy = y2 - y1; d = dx - 2 * dy;
 	float k = (float)dx /(float) dy;
 	if (k = 0)
@@ -17,7 +17,7 @@ void bre(int x1, int y1, int x2, int y2,int n)
 		while (x <= x2)
 		{
 			glVertex2f(x, y);
-			glVertex2f((n - 1)*x, (n - 1)*y);
+			glVertex2f(n*x, n*y);
 
 			if ((d >= 0) && (d < 1))
 			{
@@ -34,7 +34,7 @@ void bre(int x1, int y1, int x2, int y2,int n)
 		while (x <= x2)
 		{
 			glVertex2f(x, y);
-			glVertex2f((n - 1)*x, (n - 1)*y);
+			glVertex2f(n*x, n*y);
 			if (d < 0) {
 				y--;
 				d = d + (2 * dy + 2 * dx);
@@ -51,7 +51,7 @@ void bre(int x1, int y1, int x2, int y2,int n)
 		while (y < y2)
 		{
 			glVertex2f(x, y);
-			glVertex2f((n - 1)*x, (n - 1)*y);
+			glVertex2f(n*x, n*y);
 			if (d >= 0) {
 				x++;
 				d = d + (2 * dx - 2 * dy);
@@ -68,7 +68,7 @@ void bre(int x1, int y1, int x2, int y2,int n)
 		while (y < y2)
 		{
 			glVertex2f(x, y);
-			glVertex2f((n - 1)*x, (n - 1)*y);
+			glVertex2f(n*x, n*y);
 			if (d < 0) {
 				d = d + (2 * dx + 2 * dy);
 				x--;
@@ -94,7 +94,7 @@ void init(void) {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0.0, 200.0, 0.0, 200.0, -1.0, 1.0);
+	glOrtho(0.0, 640.0, 0.0, 200.0,0.0,0.0);
 }
 int main(int argc, char **argv)
 {

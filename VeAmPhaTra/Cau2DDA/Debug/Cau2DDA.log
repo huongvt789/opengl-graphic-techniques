@@ -1,0 +1,5 @@
+﻿  Cau2DDA.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\cau2dda\cau2dda.cpp(18): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\cau2dda\cau2dda.cpp(22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Cau2DDA.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Cau2DDA.exe
+  Cau2DDA.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\Cau2DDA.pdb (Full PDB)
