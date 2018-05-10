@@ -1,4 +1,4 @@
-// VeOTo.cpp : Defines the entry point for the console application.
+﻿// VeOTo.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -8,23 +8,32 @@
 
 #include <GL/glut.h>
 static int day = 0;
+float g_height = 5.0;
+float g_width = 7.0;
+ 
 void display(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
 	glColor3f(0.0, 0.0, 0.0);
-	glRotatef(45, 0, 0, 1);
+	glRotatef(45, 0, 0, 1); //Độ nghiêng.
 	glScalef(15, 0.6, 5);
 	glutWireCube(1.0);
 	glPopMatrix();
 	glPushMatrix();
 	glColor3f(1.0, 0.0, 1.0);
-	glTranslatef(5, 7, 0);
+
+	glTranslatef(g_height, g_width, 0); //Xử lý vị trí tai đây.
+	
 	glTranslatef((GLfloat)day / 40, (GLfloat)day / 40, 0);
 	glRotatef(((GLfloat)day)*(-1), 0, 0, 1);
-	glutWireSphere(1, 20, 15);					glPopMatrix();
+
+	glutWireTeapot(1.0); //Câu lệnh này là nơi để xử lý vẽ nên hình.
+
+	glPopMatrix();
 	glutSwapBuffers();
 }
+
 void reshape(int w, int h)
 {
 	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
@@ -48,6 +57,45 @@ void keyboard(unsigned char key, int x, int y)
 		break;
 	}
 }
+void MouseButton(int type_button, int state, GLint x, GLint y)
+{
+
+	if (type_button == GLUT_LEFT_BUTTON)
+	{
+		if (state == GLUT_UP)
+		{
+			for (int i = 0; i < 10; i++)
+			{
+				glPushMatrix();
+				glColor3f(1.0, 0.0, 1.0);
+				glTranslatef(g_height, g_width, 0.0);
+				glutPostRedisplay();
+				glPopMatrix();
+				g_height -= g_height;
+				g_width -= g_width;
+				i++;
+			}
+
+		}
+		else
+		{
+			for (int i = 0; i < 10; i++)
+			{
+				glPushMatrix();
+				glColor3f(1.0, 0.0, 1.0);
+				glTranslatef(g_height, g_width, 0.0);
+				glutPostRedisplay();
+				glPopMatrix();
+				g_height += g_height;
+				g_width += g_width;
+				i++;
+			}
+		}
+	}
+}
+void MouseMove(int x, int y){
+	int a = 5;
+}
 void init(void)
 {
 	glClearColor(1.0, 1.0, 0.0, 0.0);
@@ -64,6 +112,7 @@ int main(int argc, char** argv)
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 	glutKeyboardFunc(keyboard);
+	glutMouseFunc(MouseButton);
 	glutMainLoop();
 	return 0;
 }

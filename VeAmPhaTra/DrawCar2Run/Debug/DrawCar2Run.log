@@ -1,0 +1,52 @@
+﻿  ModuleFont.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\modulefont.cpp(578): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\modulefont.cpp(583): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\modulefont.cpp(686): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  DrawCar2Run.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(45): warning C4838: conversion from 'double' to 'const GLfloat' requires a narrowing conversion
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(45): warning C4305: 'initializing': truncation from 'double' to 'const GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(53): warning C4838: conversion from 'double' to 'const GLfloat' requires a narrowing conversion
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(53): warning C4305: 'initializing': truncation from 'double' to 'const GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(66): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(99): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(106): warning C4305: '-=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(113): warning C4305: '-=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(124): warning C4305: '-=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(129): warning C4305: '-=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(152): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(229): warning C4305: '=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(234): warning C4305: '=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(236): warning C4305: '=': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(238): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(245): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(249): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(255): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(259): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(260): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(265): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(269): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(271): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(272): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(279): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(280): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(287): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(288): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(295): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(296): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(306): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(307): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(324): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(334): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(351): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(354): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(355): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(360): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(361): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(377): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(383): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(390): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(392): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawcar2run\drawcar2run.cpp(416): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Generating Code...
+  DrawCar2Run.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\DrawCar2Run.exe
+  DrawCar2Run.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\DrawCar2Run.pdb (Full PDB)

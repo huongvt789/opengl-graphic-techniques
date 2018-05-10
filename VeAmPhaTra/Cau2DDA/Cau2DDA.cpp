@@ -5,7 +5,7 @@
 // Cau2Bresenham.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+
 #include <GL/glut.h>
 void DDA(int x1, int y1, int x2, int y2)
 {
@@ -13,13 +13,36 @@ void DDA(int x1, int y1, int x2, int y2)
 	dx = x2 - x1; dy = y2 - y1;
 	float k;
 	k = (float)dy / (float)dx;
-	while (y <= y2)
-	{
-		glVertex2f(x, y);
-		/*y = y + k;
-		x++;*///0<k<1.
-		y++;
-		x = x + 1 / k;
+	if (k>1) {
+		while (y <= y2)
+		{
+			glVertex2f(x, y);
+			y++;
+			x = x + 1 / k;
+		}
+	}
+	else if (0 <= k <= 1) {
+		while (x < x2)
+		{
+			glVertex2f(x, y);
+			x++;
+			y = y + k;
+		}
+	}
+	else if (0 > k >= -1) {
+		while (x<x2)
+		{
+			glVertex2f(x, y);
+			x++;
+			y = y - k;
+		}
+	}
+	else {
+		while (y < y2) {
+			glVertex2f(x, y);
+			y++;
+			x = x - 1 / k;
+		}
 	}
 }
 void display(void) {
@@ -27,6 +50,8 @@ void display(void) {
 	glColor3f(1.0, 1.0, 1.0);
 	glBegin(GL_POINTS);
 	DDA(10, 10, 50, 80);
+	
+	DDA(10, 10, -90, 50);
 	glEnd();
 	glFlush();
 }
