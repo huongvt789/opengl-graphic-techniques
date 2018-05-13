@@ -1,6 +1,6 @@
 ﻿  VeOTo.cpp
 d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\veoto\veoto.cpp(20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\veoto\veoto.cpp(51): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\veoto\veoto.cpp(54): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\veoto\veoto.cpp(55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   VeOTo.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\VeOTo.exe
   VeOTo.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\VeOTo.pdb (Full PDB)

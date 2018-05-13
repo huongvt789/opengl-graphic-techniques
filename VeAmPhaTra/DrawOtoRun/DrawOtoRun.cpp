@@ -1,157 +1,194 @@
-// DrawOtoRun.cpp : Defines the entry point for the console application.
-//
+/*#include <GL/gl.h>
+#include <GL/glut.h>
+#include <cmath>
+
+using namespace std;
+
+double goc = 0.005;
+bool trangthai = false;
+
+void init(void)
+{
+glClearColor(0.0, 0.0, 0.0, 0.0);
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+glOrtho(-7.0, 7.0, -7.0, 7.0, -1.0, 1.0);
+}
+void display(void)
+{
+glClear(GL_COLOR_BUFFER_BIT);
+glColor3f(1, 0, 1);
+glRotatef(goc,0,0,1);
+glutWireShpere(1.0,20,16);
+
+glutSwapBuffers();
+
+glEnd();
+glFlush();
+}
+void keyboard (unsigned char key, int x, int y) // an d de thang toc do quay , s de giam toc do quay
+{
+switch (key)
+{
+case 'd': goc = goc *2; glutPostRedisplay(); break;
+case 's': goc = goc /2; glutPostRedisplay(); break;
+default: break;
+}
+}
+void spinDisplay(void) //ham  de chay lai ham display
+{
+if (goc > 360.0)
+goc = goc - 360.0;
+glutPostRedisplay();
+}
+void mouse(int button, int state, int x, int y) //an chuot trai de quay nguoc chieu kim dong ho, chuot phai de quay theo chieu kim dong ho
+{
+switch (button) {
+case GLUT_LEFT_BUTTON:
+if (state == GLUT_DOWN)
+if(!trangthai){
+glutIdleFunc(spinDisplay);
+goc = abs(goc);
+trangthai = true;
+break;
+}else{
+glutIdleFunc(NULL);
+trangthai = false;
+break;
+}
+case GLUT_RIGHT_BUTTON:
+if (state == GLUT_DOWN)
+if(!trangthai){
+glutIdleFunc(spinDisplay);
+goc = -abs(goc);
+trangthai = true;
+break;
+}else{
+glutIdleFunc(NULL);
+trangthai = false;
+break;
+}
+default:
+break;
+}
+}
+int main(int argc, char** argv){
+glutInit(&argc, argv);  //
+glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize(500, 500);
+glutInitWindowPosition(100, 100);
+glutCreateWindow("");
+init();
+glutDisplayFunc(display);
+glutKeyboardFunc(keyboard);
+glutMouseFunc(mouse);
+glutMainLoop();
+return 0;
+}
+*/
 
 #include "stdafx.h"
-
 #include <GL/glut.h>
 
-/* ASCII code for the escape key. */
-#define ESCAPE 27
+static int gocquay = 0;
 
-/* The number of our GLUT window */
-int window;
+void init(void)
 
-/* rotation angle for the triangle. */
-float rtri = 0.0f;
-
-/* rotation angle for the quadrilateral. */
-float rquad = 0.0f;
-
-/* A general OpenGL initialization function.  Sets all of the initial parameters. */
-// We call this right after our OpenGL window is created.
-void InitGL(int Width, int Height)
 {
-	// This Will Clear The Background Color To Black
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-	glClearDepth(1.0);                // Enables Clearing Of The Depth Buffer
-	glDepthFunc(GL_LESS);                // The Type Of Depth Test To Do
-	glEnable(GL_DEPTH_TEST);            // Enables Depth Testing
-	glShadeModel(GL_SMOOTH);            // Enables Smooth Color Shading
 
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();                // Reset The Projection Matrix
+	glClearColor(0.0, 0.0, 0.0, 0.0);
 
-	gluPerspective(45.0f, (GLfloat)Width / (GLfloat)Height, 0.1f, 100.0f);
+	glShadeModel(GL_FLAT);
 
-	glMatrixMode(GL_MODELVIEW);
 }
 
-/* The function called when our window is resized (which shouldn't happen, because we're fullscreen) */
-void ReSizeGLScene(int Width, int Height)
-{
-	if (Height == 0)                // Prevent A Divide By Zero If The Window Is Too Small
-		Height = 1;
+void display(void)
 
-	glViewport(0, 0, Width, Height);        // Reset The Current Viewport And Perspective Transformation
+{
+
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	glColor3f(1.0, 1.0, 1.0);
+
+	glPushMatrix();
+
+
+
+	glRotatef((GLfloat)gocquay, 0.0, 1.0, 0.0);/*quay tit*/
+	glTranslatef(0.0, 0.0, -3.0); /*vi tri ban dau*/
+	glutWireSphere(0.5, 30, 16); /* ve khoi cau */
+
+	glPopMatrix();
+
+	glutSwapBuffers();
+
+}
+
+void reshape(int w, int h)
+
+{
+
+	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
 
 	glMatrixMode(GL_PROJECTION);
+
 	glLoadIdentity();
 
-	gluPerspective(45.0f, (GLfloat)Width / (GLfloat)Height, 0.1f, 100.0f);
+	gluPerspective(60.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
+
 	glMatrixMode(GL_MODELVIEW);
+
+	glLoadIdentity();
+
+	gluLookAt(0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0);
+
 }
 
-float ballX = -0.5f;
-float ballY = 0.0f;
-float ballZ = 0.0f;
+void keyboard(unsigned char key, int x, int y)
 
-void drawBall(void) {
-	glColor3f(0.0, 1.0, 0.0); //set ball colour
-	glTranslatef(ballX, ballY, ballZ); //moving it toward the screen a bit on creation
-									   //glRotatef(ballX,ballX,ballY,ballZ);
-	glutSolidSphere(0.3, 20, 20); //create ball.
-	glTranslatef(ballX + 1.5, ballY, ballZ); //moving it toward the screen a bit on creation
-	glutSolidSphere(0.3, 20, 20); //
-}
-
-
-/* The main drawing function. */
-void DrawGLScene()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);        // Clear The Screen And The Depth Buffer
-	glLoadIdentity();                // Reset The View
 
-	glTranslatef(rtri, 0.0f, -6.0f);        // Move Left 1.5 Units And Into The Screen 6.0
+	switch (key) {
 
-											//glRotatef(rtri,1.0f,0.0f,0.0f);        // Rotate The Triangle On The Y axis
-											// draw a triangle (in smooth coloring mode)
-	glBegin(GL_POLYGON);                // start drawing a polygon
-	glColor3f(1.0f, 0.0f, 0.0f);            // Set The Color To Red
-	glVertex3f(-1.0f, 1.0f, 0.0f);        // Top left
-	glVertex3f(0.4f, 1.0f, 0.0f);
+	case 'n':
+		gocquay = (gocquay) % 360;
+		glTranslatef(0.1, 0.1, 0.05);
+		glutPostRedisplay();
+		break;
+	case 'm':
+		gocquay = (gocquay) % 360;
+		glTranslatef(0. - 1, 0. - 1, 0.05);
+		glutPostRedisplay();
+		break;
+	default:
+		break;
 
-	glVertex3f(1.0f, 0.4f, 0.0f);
-
-	glColor3f(0.0f, 1.0f, 0.0f);            // Set The Color To Green
-	glVertex3f(1.0f, 0.0f, 0.0f);        // Bottom Right
-	glColor3f(0.0f, 0.0f, 1.0f);            // Set The Color To Blue
-	glVertex3f(-1.0f, 0.0f, 0.0f);// Bottom Left    
-
-								  //glVertex3f();
-	glEnd();                    // we're done with the polygon (smooth color interpolation)
-	drawBall();
-
-	rtri += 0.005f;                    // Increase The Rotation Variable For The Triangle
-	if (rtri>2)
-		rtri = -2.0f;
-	rquad -= 15.0f;                    // Decrease The Rotation Variable For The Quad
-
-									   // swap the buffers to display, since double buffering is used.
-	glutSwapBuffers();
-}
-
-/* The function called whenever a key is pressed. */
-void keyPressed(unsigned char key, int x, int y)
-{
-	/* sleep to avoid thrashing this procedure */
-	// usleep(100);
-
-	/* If escape is pressed, kill everything. */
-	if (key == ESCAPE)
-	{
-		/* shut down our window */
-		glutDestroyWindow(window);
-
-		/* exit the program...normal termination. */
-		exit(0);
 	}
+
 }
 
-int main(int argc, char **argv)
+int main(int argc, char** argv)
+
 {
+
 	glutInit(&argc, argv);
 
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 
-	/* get a 640 x 480 window */
-	glutInitWindowSize(640, 480);
+	glutInitWindowSize(500, 500);
+	glutInitWindowPosition(100, 100);
+	glutCreateWindow("");
 
-	/* the window starts at the upper left corner of the screen */
-	glutInitWindowPosition(0, 0);
+	init();
 
-	/* Open a window */
-	window = glutCreateWindow("Moving Car");
+	glutDisplayFunc(display);
 
-	/* Register the function to do all our OpenGL drawing. */
-	glutDisplayFunc(&DrawGLScene);
+	glutReshapeFunc(reshape);
 
-	/* Go fullscreen.  This is as soon as possible. */
-	//glutFullScreen();
+	glutKeyboardFunc(keyboard);
 
-	/* Even if there are no events, redraw our gl scene. */
-	glutIdleFunc(&DrawGLScene);
-
-	/* Register the function called when our window is resized. */
-	glutReshapeFunc(&ReSizeGLScene);
-
-	/* Register the function called when the keyboard is pressed. */
-	glutKeyboardFunc(&keyPressed);
-
-	/* Initialize our window. */
-	InitGL(640, 480);
-
-	/* Start Event Processing Engine */
 	glutMainLoop();
 
-	return 1;
+	return 0;
+
 }

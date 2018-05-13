@@ -15,20 +15,20 @@ void display(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
-	glColor3f(0.0, 0.0, 0.0);
+	glColor3f(0.0, 1.0, 0.0);
 	glRotatef(45, 0, 0, 1); //Độ nghiêng.
 	glScalef(15, 0.6, 5);
 	glutWireCube(1.0);
 	glPopMatrix();
 	glPushMatrix();
-	glColor3f(1.0, 0.0, 1.0);
+	glColor3f(1.0, 1.0, 1.0);
 
 	glTranslatef(g_height, g_width, 0); //Xử lý vị trí tai đây.
 	
 	glTranslatef((GLfloat)day / 40, (GLfloat)day / 40, 0);
 	glRotatef(((GLfloat)day)*(-1), 0, 0, 1);
 
-	glutWireTeapot(1.0); //Câu lệnh này là nơi để xử lý vẽ nên hình.
+	glutWireSphere(1.0, 30, 16); //Câu lệnh này là nơi để xử lý vẽ nên hình.
 
 	glPopMatrix();
 	glutSwapBuffers();
@@ -47,11 +47,13 @@ void reshape(int w, int h)
 void keyboard(unsigned char key, int x, int y)
 {
 	switch (key) {
-	case 'a':
-		day = (day + 1) / 1.1;					glutPostRedisplay();
+	case 'm':
+		day = (day + 1) / 1.1;
+		glutPostRedisplay();
 		break;
-	case ',':
-		day = (day - 1)*1.1;				glutPostRedisplay();
+	case 'n':
+		day = (day - 1)*1.1;	
+		glutPostRedisplay();
 		break;
 	default:
 		break;
@@ -98,7 +100,7 @@ void MouseMove(int x, int y){
 }
 void init(void)
 {
-	glClearColor(1.0, 1.0, 0.0, 0.0);
+	glClearColor(0.0, 0.0, 1.0, 1.0);
 	glShadeModel(GL_FLAT);
 }
 int main(int argc, char** argv)
