@@ -1,0 +1,6 @@
+﻿  drawCarRun.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\drawcarrun\drawcarrun.cpp(21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\drawcarrun\drawcarrun.cpp(52): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\drawcarrun\drawcarrun.cpp(56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  drawCarRun.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\drawCarRun\Debug\drawCarRun.exe
+  drawCarRun.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\drawCarRun\Debug\drawCarRun.pdb (Full PDB)

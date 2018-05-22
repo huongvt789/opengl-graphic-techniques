@@ -1,5 +1,3 @@
 ﻿  DrawOtoRun.cpp
-d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawotorun\drawotorun.cpp(155): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-d:\ky thuat do hoa\opengl-graphic-techniques\veamphatra\drawotorun\drawotorun.cpp(160): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
   DrawOtoRun.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\DrawOtoRun.exe
   DrawOtoRun.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\VeAmPhaTra\Debug\DrawOtoRun.pdb (Full PDB)

@@ -1,0 +1,7 @@
+﻿  ConsoleApplication1.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\consoleapplication1\consoleapplication1.cpp(8): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\consoleapplication1\consoleapplication1.cpp(37): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\consoleapplication1\consoleapplication1.cpp(39): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\consoleapplication1\consoleapplication1.cpp(78): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+  ConsoleApplication1.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\drawCarRun\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\drawCarRun\Debug\ConsoleApplication1.pdb (Full PDB)

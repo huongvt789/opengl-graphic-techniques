@@ -1,0 +1,11 @@
+﻿  ModelCar.cpp
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(127): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(141): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(148): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(150): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(157): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(159): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(177): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\ky thuat do hoa\opengl-graphic-techniques\drawcarrun\modelcar\modelcar.cpp(181): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  ModelCar.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\drawCarRun\Debug\ModelCar.exe
+  ModelCar.vcxproj -> D:\Ky thuat do hoa\opengl-graphic-techniques\drawCarRun\Debug\ModelCar.pdb (Full PDB)

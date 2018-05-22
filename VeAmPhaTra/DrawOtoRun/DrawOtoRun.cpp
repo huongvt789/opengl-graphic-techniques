@@ -1,194 +1,87 @@
-/*#include <GL/gl.h>
+﻿#include "stdafx.h"
 #include <GL/glut.h>
-#include <cmath>
+#include <stdlib.h>
+GLubyte a[40] ={
+	 0x00,  0xc3, 0xc3, 0xc3, 0xc3, 0xff, 0xc3, 0xc3, 0xc3, 0x66, 0x3c, 0x18
+};
+GLubyte rasters[24] = 
+{ 
+	0xc0, 0x00, 0xc0, 0x00, 0xc0, 0x00, 0xc0, 0x00, 0xc0, 0x00, 
+	0xff, 0x00, 0xff, 0x00, 0xc0, 0x00, 0xc0, 0x00, 0xc0, 0x00, 
+	0xff, 0xc0, 0xff, 0xc0 };
+GLubyte d[36] = // chữ Đ
+{ 0x73, 0xC0,
+0xDF,  0xE0,
+0xDE,  0x60,
+0x78, 0x30,
+0x28, 0x30,
+0x08, 0x18, // 
+0x1C, 0x1C,
+0x3E, 0x0C,
+0x1C, 0x1C,
+0x08, 0x38, //
+0x08, 0x10,
+0x88, 0x30, //
+0xC8, 0xF0,
+0x6B, 0xE0,
+0x3F, 0x80,
+0x1C, 0x00,
+0x02, 0x00,
+0x01, 0x00 }; // từ trái qua phải và từ dưới lên trên // dòng 1
 
-using namespace std;
+GLubyte i[26] = // chữ i
+{};
 
-double goc = 0.005;
-bool trangthai = false;
+ GLubyte e[16] = // chữ ê
+ {};
 
-void init(void)
-{
-glClearColor(0.0, 0.0, 0.0, 0.0);
-glMatrixMode(GL_PROJECTION);
-glLoadIdentity();
-glOrtho(-7.0, 7.0, -7.0, 7.0, -1.0, 1.0);
-}
-void display(void)
-{
-glClear(GL_COLOR_BUFFER_BIT);
-glColor3f(1, 0, 1);
-glRotatef(goc,0,0,1);
-glutWireShpere(1.0,20,16);
+ GLubyte n[16] = // chữ n
+ {};
 
-glutSwapBuffers();
+ GLubyte huyen[16] = // dấu `
+ {};
 
-glEnd();
-glFlush();
-}
-void keyboard (unsigned char key, int x, int y) // an d de thang toc do quay , s de giam toc do quay
-{
-switch (key)
-{
-case 'd': goc = goc *2; glutPostRedisplay(); break;
-case 's': goc = goc /2; glutPostRedisplay(); break;
-default: break;
-}
-}
-void spinDisplay(void) //ham  de chay lai ham display
-{
-if (goc > 360.0)
-goc = goc - 360.0;
-glutPostRedisplay();
-}
-void mouse(int button, int state, int x, int y) //an chuot trai de quay nguoc chieu kim dong ho, chuot phai de quay theo chieu kim dong ho
-{
-switch (button) {
-case GLUT_LEFT_BUTTON:
-if (state == GLUT_DOWN)
-if(!trangthai){
-glutIdleFunc(spinDisplay);
-goc = abs(goc);
-trangthai = true;
-break;
-}else{
-glutIdleFunc(NULL);
-trangthai = false;
-break;
-}
-case GLUT_RIGHT_BUTTON:
-if (state == GLUT_DOWN)
-if(!trangthai){
-glutIdleFunc(spinDisplay);
-goc = -abs(goc);
-trangthai = true;
-break;
-}else{
-glutIdleFunc(NULL);
-trangthai = false;
-break;
-}
-default:
-break;
-}
-}
-int main(int argc, char** argv){
-glutInit(&argc, argv);  //
-glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-glutInitWindowSize(500, 500);
-glutInitWindowPosition(100, 100);
-glutCreateWindow("");
-init();
-glutDisplayFunc(display);
-glutKeyboardFunc(keyboard);
-glutMouseFunc(mouse);
-glutMainLoop();
-return 0;
-}
-*/
-
-#include "stdafx.h"
-#include <GL/glut.h>
-
-static int gocquay = 0;
-
-void init(void)
-
-{
-
+void init(void) {
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1); 
 	glClearColor(0.0, 0.0, 0.0, 0.0);
-
-	glShadeModel(GL_FLAT);
-
 }
-
 void display(void)
-
 {
-
-	glClear(GL_COLOR_BUFFER_BIT);
-
+	glClear(GL_COLOR_BUFFER_BIT); 
 	glColor3f(1.0, 1.0, 1.0);
+	glRasterPos2i(20, 20); 
 
-	glPushMatrix();
-
-
-
-	glRotatef((GLfloat)gocquay, 0.0, 1.0, 0.0);/*quay tit*/
-	glTranslatef(0.0, 0.0, -3.0); /*vi tri ban dau*/
-	glutWireSphere(0.5, 30, 16); /* ve khoi cau */
-
-	glPopMatrix();
-
-	glutSwapBuffers();
-
+	glBitmap(10, 12, 0.0, 0.0, 11.0, 0.0, rasters); 
+	glBitmap(14, 17, 0.0, 0.0, 10.0, 0.0, d); // Hiển thị chiều cao và chiều rộng chữ D
+	
+											  //glBitmap(10, 12, 0.0, 0.0, 11.0, 0.0, rasters);
+	//glBitmap(10, 12, 0.0, 0.0, 11.0, 0.0, rasters);
+	glFlush();
 }
-
 void reshape(int w, int h)
-
 {
-
-	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
-
+	glViewport(0, 0, (GLsizei)w, (GLsizei)h); 
 	glMatrixMode(GL_PROJECTION);
-
-	glLoadIdentity();
-
-	gluPerspective(60.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
-
-	glMatrixMode(GL_MODELVIEW);
-
-	glLoadIdentity();
-
-	gluLookAt(0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0);
-
-}
-
+	glLoadIdentity(); 
+	glOrtho(0, w, 0, h, -1.0, 1.0);
+	glMatrixMode(GL_MODELVIEW); }
 void keyboard(unsigned char key, int x, int y)
-
-{
-
+{ 
 	switch (key) {
-
-	case 'n':
-		gocquay = (gocquay) % 360;
-		glTranslatef(0.1, 0.1, 0.05);
-		glutPostRedisplay();
-		break;
-	case 'm':
-		gocquay = (gocquay) % 360;
-		glTranslatef(0. - 1, 0. - 1, 0.05);
-		glutPostRedisplay();
-		break;
-	default:
-		break;
-
-	}
-
+	case 27:     
+	exit(0); }
 }
-
 int main(int argc, char** argv)
-
 {
-
-	glutInit(&argc, argv);
-
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-
-	glutInitWindowSize(500, 500);
-	glutInitWindowPosition(100, 100);
-	glutCreateWindow("");
-
-	init();
-
-	glutDisplayFunc(display);
-
+	glutInit(&argc, argv);  
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(300, 300);  
+	glutInitWindowPosition(100, 100); 
+	glutCreateWindow(argv[0]); 
+	init();  
 	glutReshapeFunc(reshape);
-
-	glutKeyboardFunc(keyboard);
-
-	glutMainLoop();
-
+	glutKeyboardFunc(keyboard); 
+	glutDisplayFunc(display);
+	glutMainLoop(); 
 	return 0;
-
 }
